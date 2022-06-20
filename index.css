@@ -1,0 +1,54 @@
+:root {
+  --primary-color: #fafafa;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+.main {
+  width: 100vw;
+  height: 100vh;
+  background: var(--primary-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.animal-container {
+  background: var(--primary-color);
+  height: 42vh;
+  width: 55vw;
+  border: 1px solid black;
+}
+.animal {
+  position: relative;
+  background: rgb(53, 53, 53);
+}
+.animal-head {
+  height: 2rem;
+  width: 3rem;
+  /* border-radius: 49px 16px 41px 9px; */
+  margin: 7px;
+  background: var(--primary-color);
+}
+.animal-head img {
+  height: 100%;
+  width: 100%;
+}
+.animal-body {
+  height: 2.4rem;
+  width: 6.7rem;
+  left: 2.27rem;
+  top: -1.7rem;
+  border-radius: 0px 21px 36px 39px;
+}
+.animal-tail {
+  width: 3.7rem;
+  height: 0.6rem;
+  top: -4rem;
+  left: 8rem;
+  transform: rotate(345deg);
+  transform: translateZ(-20%);
+  transform-origin: left;
+  border-radius: 15px;
+}
