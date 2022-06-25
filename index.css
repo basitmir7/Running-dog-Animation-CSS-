@@ -7,17 +7,27 @@ body {
   padding: 0;
 }
 .main {
+  margin: 0;
+  position: relative;
   width: 100vw;
   height: 100vh;
   background: var(--primary-color);
-  display: flex;
+  /* display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: center; */
+  background-image: url(./assets/field.png);
+
+  background-repeat: repeat-x;
+
+  animation: back 15s infinite linear;
 }
 .animal-container {
-  background: var(--primary-color);
   height: 42vh;
   width: 55vw;
+  position: relative;
+  margin: 0;
+  top: 60%;
+  left: 28rem;
 }
 .animal {
   position: relative;
@@ -107,5 +117,13 @@ body {
 @keyframes tail {
   100% {
     transform: rotate(350deg);
+  }
+}
+@keyframes back {
+  from {
+    background-position-x: 0;
+  }
+  to {
+    background-position-x: 550%;
   }
 }
