@@ -18,37 +18,94 @@ body {
   background: var(--primary-color);
   height: 42vh;
   width: 55vw;
-  border: 1px solid black;
 }
 .animal {
   position: relative;
   background: rgb(53, 53, 53);
 }
 .animal-head {
-  height: 2rem;
-  width: 3rem;
+  height: 6rem;
+  width: 7rem;
   /* border-radius: 49px 16px 41px 9px; */
   margin: 7px;
   background: var(--primary-color);
+  z-index: 5;
+  background: transparent;
 }
 .animal-head img {
   height: 100%;
   width: 100%;
 }
 .animal-body {
-  height: 2.4rem;
-  width: 6.7rem;
-  left: 2.27rem;
-  top: -1.7rem;
-  border-radius: 0px 21px 36px 39px;
+  height: 6.4rem;
+  width: 13.7rem;
+  left: 4.27rem;
+  top: -2.7rem;
+  border-radius: 26px 48px 59px 83px;
 }
 .animal-tail {
-  width: 3.7rem;
-  height: 0.6rem;
-  top: -4rem;
-  left: 8rem;
+  width: 5.7rem;
+  height: 0.9rem;
+  top: -8.5rem;
+  left: 16.5rem;
   transform: rotate(345deg);
   transform: translateZ(-20%);
   transform-origin: left;
   border-radius: 15px;
+  animation: tail 700ms infinite alternate-reverse
+    cubic-bezier(0.215, 0.61, 0.355, 1);
+}
+.legs {
+  height: 5.7rem;
+  width: 0.9rem;
+  border-radius: 26px 48px 59px 83px;
+  position: relative;
+  /* top: 49%; */
+  transform-origin: top;
+  transition: all cubic-bezier(0.165, 0.84, 0.44, 1) 100ms;
+  animation: walk 1s infinite alternate-reverse ease-in-out;
+}
+.frontleg-one {
+  top: -4.6rem;
+  left: 6.5rem;
+}
+.frontleg-two {
+  top: -10.2rem;
+  left: 7.8rem;
+
+  animation-delay: 1s;
+}
+.hindleg-one {
+  top: -15.59rem;
+  left: 14.2rem;
+}
+.hindleg-two {
+  top: -21.5rem;
+  left: 15.5rem;
+
+  animation-delay: 1s;
+}
+.legs::after {
+  content: "";
+  position: absolute;
+  height: 1rem;
+  width: 1em;
+  background: rgb(39, 38, 38);
+  top: 88%;
+  border-radius: 10px 0 10px 0;
+  border-radius: 10px 10px 0 0;
+}
+
+@keyframes walk {
+  0% {
+    transform: rotate(-29deg);
+  }
+  100% {
+    transform: rotate(20deg);
+  }
+}
+@keyframes tail {
+  100% {
+    transform: rotate(350deg);
+  }
 }
